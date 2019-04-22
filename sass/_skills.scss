@@ -1,0 +1,11 @@
+.skills {
+    grid-column: 1/-1;
+    &__icon {
+        fill: #fff;
+        width: 25rem;
+        height:auto;
+        grid-row: 1/span 2;
+        transform: translateY(-1rem);
+        background-color: $color-red;
+    }
+}

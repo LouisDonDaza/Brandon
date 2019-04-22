@@ -1,0 +1,9 @@
+.footer{
+    grid-column: 1/-1;
+    background-color: $color-secondary;
+    color: $color-white;
+}
+.copyright {
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+}

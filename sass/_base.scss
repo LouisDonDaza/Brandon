@@ -1,0 +1,65 @@
+// COLOR VARIABLES
+$color-bg: #000f08;
+$color-primary: #40434e;
+$color-secondary: #080705;
+$color-dark-red: #702632;
+$color-red: #912f40;
+$color-white: #fffffa;
+$color-dark-green: #136f63;
+$color-dark-yellow: #e0ca3c;
+$color-dark-orange: #f34213;
+$color-dark-purple: #3e2f5b;
+//FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-heading: 'Roboto Mono', monospace;
+$font-paragraph: 'Scope One', serif;
+// font-family: 'Vidaloka', serif;
+// font-family: 'Lobster', cursive;
+// font-family: 'Scope One', serif;
+// font-family: 'Lato', sans-serif;
+//font-family: 'Roboto Mono', monospace;
+@font-face {
+    font-family: 'DemonCubicBlockFont Black';
+    font-style: normal;
+    font-weight: normal;
+    src: local('DemonCubicBlockFont Black'), url('cubicblock_b.woff') format('woff');
+}
+// RESPONSIVE BREAKPOINTS
+$bp-largest: 75em;
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; //600px
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    @media only screen and (max-width: $bp-largest){
+        font-size: 50%;
+    }
+}
+body {
+    font-family: $font-primary;
+    color: $color-primary;
+    //font-weight: 300;
+    line-height: 1.6;
+    background-color: $color-bg;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, [col-start] 1fr [col-end]);
+    text-align:center;
+}
+.heading__one {
+    font-family: 'DemonCubicBlockFont Black';
+    margin: 0.5rem auto;
+    font-size: 6rem;
+    color: $color-white;
+    //margin: 0 auto;
+    //display: block;
+}

@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'DemonCubicBlockFont Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local("DemonCubicBlockFont Black"), url("cubicblock_b.woff") format("woff"); }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #40434e;
+  line-height: 1.6;
+  background-color: #000f08; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(6, [col-start] 1fr [col-end]);
+  text-align: center; }
+
+.heading__one {
+  font-family: 'DemonCubicBlockFont Black';
+  margin: 0.5rem auto;
+  font-size: 6rem;
+  color: #fffffa; }
+
+.nav {
+  grid-column: col-start 1/ col-end 6;
+  display: grid;
+  grid-template-columns: 60vw auto;
+  padding: 2rem 2rem 1rem 2rem;
+  background-color: #080705; }
+  @media only screen and (max-width: 50em) {
+    .nav {
+      padding: 1rem 1rem 0.5rem 1rem; } }
+  .nav__logo {
+    height: 6rem;
+    width: auto; }
+  .nav__list {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr)); }
+    @media only screen and (max-width: 50em) {
+      .nav__list {
+        padding: 0.5rem; } }
+  .nav__link:link, .nav__link:visited {
+    color: #912f40;
+    font-size: 1.4rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    display: block; }
+  .nav__link:hover, .nav__active {
+    color: #fffffa;
+    background-color: rgba(255, 255, 255, 0.05); }
+
+.header {
+  grid-column: col-start 1 / col-end 4; }
+  .header-video__content {
+    width: 100%; }
+
+.profile {
+  grid-column: col-start 5/ col-end 6;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
+  background-color: #912f40;
+  color: #fffffa; }
+  .profile--photo {
+    border-radius: 50%;
+    height: 12rem;
+    width: auto; }
+  .profile--logo {
+    height: 6rem;
+    width: auto; }
+  .profile--list {
+    list-style-type: none;
+    padding: 1rem 2rem;
+    font-size: 1.8rem; }
+  .profile--detail {
+    padding: 1rem 0; }
+
+.skills {
+  grid-column: 1/-1; }
+  .skills__icon {
+    fill: #fff;
+    width: 25rem;
+    height: auto;
+    grid-row: 1/span 2;
+    transform: translateY(-1rem);
+    background-color: #912f40; }
+
+.projects {
+  grid-column: col-start 1/col-end 6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content repeat(3, 1fr) auto;
+  color: #fffffa; }
+  .projects__header {
+    grid-column: 1/-1; }
+  .projects__photos {
+    grid-column: 1/2; }
+    .projects__photos--right {
+      grid-column: 2/3;
+      grid-row: 3/4; }
+  .projects-video__content {
+    width: 50vw;
+    height: auto; }
+  .projects__text {
+    grid-column: 2/3;
+    padding: 6rem 3rem;
+    align-self: center; }
+    .projects__text--left {
+      padding: 6rem 3rem;
+      grid-column: 1/2;
+      grid-row: 3/4;
+      align-self: center;
+      background-color: #136f63; }
+    .projects__text--one {
+      background-color: #f34213; }
+    .projects__text--three {
+      background-color: #3e2f5b; }
+  .projects__heading {
+    font-size: 3.5rem;
+    font-style: "Roboto Mono", monospace;
+    font-weight: 700; }
+  .projects__desc {
+    font-size: 1.6rem;
+    font-style: "Scope One", serif; }
+  .projects__legacy {
+    grid-column: 1/-1;
+    font-family: 'DemonCubicBlockFont Black';
+    font-size: 6rem;
+    padding: 5rem 7rem;
+    background-image: url(../img/BrandonFinal.png);
+    background-position: center; }
+
+.footer {
+  grid-column: 1/-1;
+  background-color: #080705;
+  color: #fffffa; }
+
+.copyright {
+  padding: 1.5rem 2rem;
+  font-size: 1.6rem; }

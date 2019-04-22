@@ -1,0 +1,27 @@
+.profile {
+    grid-column: col-start 5/ col-end 6;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: center;
+    background-color: $color-red;
+    color: $color-white;
+    &--photo{
+        border-radius: 50%;
+        height: 12rem;
+        width: auto;
+    }
+    &--logo {
+        height: 6rem;
+        width: auto;
+    }
+    &--list {
+        list-style-type: none;
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+    }
+    &--detail {
+        padding: 1rem 0;
+    }
+}

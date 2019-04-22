@@ -1,0 +1,6 @@
+.header {
+    grid-column: col-start 1 / col-end 4;
+    &-video__content {
+        width: 100%;
+    }
+}
