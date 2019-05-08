@@ -1,5 +1,8 @@
 .header {
     grid-column: col-start 1 / col-end 4;
+    @media only screen and (max-width: $bp-medium){
+        grid-column: 1/-1;
+    }
     &-video__content {
         width: 100%;
     }

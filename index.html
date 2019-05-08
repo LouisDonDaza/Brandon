@@ -13,69 +13,145 @@
 </head>
 <body class="container">
     <nav class="nav">
-        <img src="img/BrandonLogo.png" alt="Logo" class="nav__logo">
+        <img src="img/Logo.png" alt="Logo" class="nav__logo">
         <ul class="nav__list">
             <li><a href="#profile" class="nav__link">Profile</a></li>
-            <li><a href="#" class="nav__link">Skills</a></li>
-            <li><a href="#projects" class="nav__link">Projects</a></li>
-            <li><a href="#" class="nav__link">Contact</a></li>
+            <li><a href="#skills" class="nav__link">Skills</a></li>
+            <li class="nav__link--projects">
+                <a href="#projects" class="nav__link">Projects &#11163;</a>
+                <ul class="nav__projects">
+                    <li><a href="#Lancelot" class="nav__link nav__link--project nav__link--project--1">Lancelot</a></li>
+                    <li><a href="#Jaeger" class="nav__link nav__link--project nav__link--project--2">Jaeger</a></li>
+                    <li><a href="#Treant" class="nav__link nav__link--project nav__link--project--3">Treant</a></li>
+                    <li><a href="#Others" class="nav__link nav__link--project nav__link--project--4">Others</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
     <header class="header">
         <video class="header-video__content" autoplay muted loop>
-            <source src="img/placeholder.webm" type="video/webm">
+            <source src="img/Animation1.mp4" type="video/webm">
         </video>
     </header>
     <div class="profile" id="profile">
         <img src="img/Brandon.jpg" alt="Brandon" class="profile--photo">
-        <img src="img/BrandonSiggy.png" alt="Brandon" class="profile--logo">
+        <img src="img/LogoSiggy.png" alt="Brandon" class="profile--logo">
         <ul class="profile--list">
-            <li class="profile--detail"><i class="fas fa-graduation-cap"></i> Student at Gnomon</li>
+            <li class="profile--detail"><i class="fas fa-graduation-cap"></i> Attended Classes at Gnomon — School of Visual Effects, Games & Animation</li>
             <li class="profile--detail"><i class="fas fa-map-pin"></i> Santa Clarita, CA</li>
-            <li class="profile--detail"><i class="fas fa-phone"></i> XXX-XXX-XXXX</li>
-            <li class="profile--detail"><i class="fas fa-envelope"></i> BleeEffects@gmail.com</li>
+            <li class="profile--detail"><i class="fas fa-envelope"></i> BLeeEffects@gmail.com</li>
+            <ul class="profile--social">
+                <li class="profile--social--item">
+                    <a href="https://www.artstation.com/brandonlee" class="profile--social--link" target="_blank" rel="noopener noreferrer" >
+                        <i class="fab fa-artstation"></i>
+                    </a>
+                    <span class="profile--social--tooltip">Art Station</span>
+                </li>
+                <li class="profile--social--item">
+                    <a href="https://www.instagram.com/bleeeffects/" class="profile--social--link" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <span class="profile--social--tooltip">Instagram</span>
+                </li>
+                <li class="profile--social--item">
+                    <a href="https://www.linkedin.com/in/bleeeffects/" class="profile--social--link" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <span class="profile--social--tooltip">LinkedIn</span>
+                </li>
+                <li class="profile--social--item">
+                    <a href="https://www.facebook.com/bleeeffects" class="profile--social--link" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <span class="profile--social--tooltip">Facebook</span>
+                </li>
+                <li class="profile--social--item">
+                    <a href="https://drive.google.com/file/d/1Yk0XZgodH4DypGNjJIvkOQuQ8cau352B/view" class="profile--social--link" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-file-alt"></i>
+                    </a>
+                    <span class="profile--social--tooltip">Resume</span>
+                </li>
+            </ul>
         </ul>
     </div>
-    <section class="skills">
-       <img src="img/zbrush.svg" alt="zbrush" class="skills__icon">
+    <section class="skills" id="skills">
+       <div class="skills__card">
+        <i class="fas fa-cubes skills__icon"></i>
+        <h2 class="skills__heading">Modeling</h2>
+        <span class="skills__text">2+ years of foundational and 3D graphic art training, specializing in 3D hard-surface, prop, and environmental
+            modeling. Software: Zbrush, Maya</span>
+       </div>
+       <div class="skills__card">
+        <i class="fab fa-adobe skills__icon"></i>
+        <h2 class="skills__heading">Texturing</h2>
+        <span class="skills__text">Primary education at top animation and visual effects school - Gnomon School of VFX & Animation for Film and
+            Games - under instructors presently working in the film and games industry. Software: Substance Painter, Mari, Adobe Photoshop</span>
+       </div>
+       <div class="skills__card">
+        <i class="fas fa-cogs skills__icon"></i>
+        <h2 class="skills__heading">Rendering & Composition</h2>
+        <span class="skills__text">Experienced in character concepting, 2D compositing, 3D animation, and advanced hard-surface rigging. Software: KeyShot, VRay, RedShift, Adobe Photoshop</span>
+       </div>
     </section>
     <section class="projects" id="projects">
-        <h1 class="heading__one projects__header">projects</h1>
-        <div class="projects__photos">
+        <div class="projects__header">
+            <h1 class="heading__one">projects</h1>
+        </div>
+        <div class="projects__photos projects__photos--one"id="Lancelot">
             <video class="projects-video__content" autoplay muted loop>
-                <source src="img/project-1.webm" type="video/webm">
+                <source src="img/LancelotColoredTurntable.mp4" type="video/webm">
             </video>
         </div>
-        <div class="projects__text projects__text--one">
-            <h2 class="projects__heading">Project Uno</h2>
+        <div class="projects__text--one projects__text">
+            <h2 class="projects__heading">Lancelot</h2>
             <p class="projects__desc">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe maiores, autem sequi, commodi alias nisi eaque temporibus soluta minima. For more information, pls learn Italian on your own time. If this language is even Italian.
+                    <a href="https://www.artstation.com/artwork/raL66" class="btn-text" target="_blank" rel="noopener noreferrer">See more &rarr;</a>
             </p>
         </div>
-        <div class="projects__photos--right">
+        <div class="projects__photos projects__photos--two" id="Jaeger"> 
             <video class="projects-video__content" autoplay muted loop>
                 <source src="img/project-2.webm" type="video/webm">
             </video>
         </div>
-        <div class="projects__text--left">
-            <h2 class="projects__heading">Project Dos</h2>
+        <div class="projects__text--left projects__text">
+            <h2 class="projects__heading">Jaeger</h2>
             <p class="projects__desc">
                 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here'.
+                <a href="https://www.artstation.com/artwork/QznnXl" class="btn-text" target="_blank" rel="noopener noreferrer">See more &rarr;</a>
             </p>
         </div>   
-        <div class="projects__photos">
+        <div class="projects__photos projects__photos--three" id="Treant">
             <video class="projects-video__content" autoplay muted loop>
-                <source src="img/project-3.webm" type="video/webm">
+                <source src="img/TreantColoredTurntable.mp4" type="video/webm">
             </video>
         </div>
-        <div class="projects__text projects__text--three">
-            <h2 class="projects__heading">Project Tres</h2>
+        <div class="projects__text--three projects__text">
+            <h2 class="projects__heading">Treant</h2>
             <p class="projects__desc">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                <a href="https://www.artstation.com/artwork/YaeER6" class="btn-text" target="_blank" rel="noopener noreferrer">See more &rarr;</a>
             </p>
         </div> 
-        <div class="projects__legacy">
+        <div class="projects__legacy" id="Others">
             legacy projects
+        </div>
+        <div class="projects__cards">
+            <div class="projects__card">
+                <img src="img/councilwoman-1.jpg" alt="dummy" class="projects__card--img projects__card--img--one--1">
+                <img src="img/councilwoman-2.jpg" alt="dummy" class="projects__card--img projects__card--img--one--2">
+                <span class="projects__card--text">Councilwoman</span>
+            </div>
+            <div class="projects__card">
+                    <img src="img/Thotsakan-2.png" alt="dummy" class="projects__card--img projects__card--img--two--1">
+                    <img src="img/Thotsakan-1.png" alt="dummy" class="projects__card--img projects__card--img--two--2">
+                    <span class="projects__card--text">Thotsokan</span>
+            </div>
+            <div class="projects__card">
+                    <img src="img/Faun-1.png" alt="dummy" class="projects__card--img projects__card--img--three--1">
+                    <img src="img/Faun-2.png" alt="dummy" class="projects__card--img projects__card--img--three--2">
+                    <span class="projects__card--text">Faun</span>
+            </div>
         </div>
     </section>
     <footer class="footer">

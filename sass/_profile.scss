@@ -6,7 +6,11 @@
     align-content: space-around;
     align-items: center;
     background-color: $color-red;
-    color: $color-white;
+    color: lighten($color-primary, 55%);
+    @media only screen and (max-width: $bp-medium){
+        grid-column: 1/-1;
+        padding: 2rem 0.5rem;
+    }
     &--photo{
         border-radius: 50%;
         height: 12rem;
@@ -24,4 +28,48 @@
     &--detail {
         padding: 1rem 0;
     }
+    &--social {
+        
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        font-size: 2.4rem;
+        justify-content: center;
+        @media only screen and (max-width: $bp-medium){
+            font-size: 3.5rem;
+        }
+        &--item{
+            margin: 0 1rem;
+            transition: all .2s;
+            &:hover {
+                transform: scale(1.3);
+            }
+            position: relative;
+        }
+        &--tooltip {
+            font-size: 1.2rem;
+            max-width: 120px;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            background-color: $color-bg;
+            visibility:hidden;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-align:center;
+
+            position: absolute;
+            z-index: 2;
+        }
+        &--link,
+        &--link:visited {
+            color: inherit;
+        }
+        &--link:hover {
+            color: $color-bg;
+        }
+    }
+}
+.profile--social--item:hover .profile--social--tooltip{
+    visibility: visible;
 }

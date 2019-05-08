@@ -54,12 +54,18 @@ body {
     display: grid;
     grid-template-columns: repeat(6, [col-start] 1fr [col-end]);
     text-align:center;
+    @media only screen and (max-width: $bp-small){
+        grid-template-columns: 100vw;
+    }
 }
 .heading__one {
     font-family: 'DemonCubicBlockFont Black';
     margin: 0.5rem auto;
     font-size: 6rem;
     color: $color-white;
+    &--colored {
+        color: $color-dark-red;
+    }
     //margin: 0 auto;
     //display: block;
 }

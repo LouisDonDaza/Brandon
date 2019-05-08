@@ -1,16 +1,24 @@
 .nav {
     grid-column: col-start 1/ col-end 6;
-
+    @media only screen and (max-width: $bp-small){
+        grid-column: 1/-1;
+    }
     display: grid;
     grid-template-columns: 60vw auto;
-    padding: 2rem 2rem 1rem 2rem;
+    padding: 1rem 1rem .5rem 1rem;
     background-color: $color-secondary;
     @media only screen and (max-width: $bp-medium){
        padding: 1rem 1rem 0.5rem 1rem;
     }
+    @media only screen and (max-width: $bp-small){
+        grid-column: 1/-1;
+    }
     &__logo {
         height: 6rem;
         width:auto;
+        @media only screen and (max-width: $bp-small){
+            margin-left: 70%;
+         }
     }
     &__list {
         display: inline-block;
@@ -21,6 +29,9 @@
         grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
         @media only screen and (max-width: $bp-medium){
             padding: 0.5rem;
+         }
+         @media only screen and (max-width: $bp-small){
+            display:none;
          }
     }
     &__link:link,
@@ -33,9 +44,36 @@
         padding: 1.5rem;
         display: block;
     }
+    // &__link:active {
+    //     border-bottom: 1px solid $color-red;
+    // }
     &__link:hover,
     &__active {
         color: $color-white;
         background-color: rgba(#fff, 0.05);
     }
+    &__link--projects {
+        position: relative;
+    }
+    &__projects {
+        position: absolute;
+        z-index: 2;
+
+        background-color: $color-bg;
+        list-style-type: none;
+        visibility: hidden;
+        &:hover {
+            visibility: visible;
+        }
+    }
+    // &__link--project:link,
+    // &__link--project:visited {
+    //     visibility: hidden;
+    // }
+    &__link--project:hover {
+        visibility: visible;
+    }
+}
+.nav__link--projects:hover .nav__projects {
+    visibility: visible;
 }

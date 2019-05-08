@@ -2,15 +2,21 @@
     grid-column: col-start 1/col-end 6;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: min-content repeat(3, 1fr) auto;
+    grid-template-rows: min-content repeat(3, 1fr) auto auto;
+    grid-row-gap: 0;
     color: $color-white;
+    
     //background-color: $color-primary;
     &__header {
         grid-column: 1/-1;
+        text-align:center;
+        background-image: url(../img/BrandonFinal.png);
+        padding: 5rem 7rem;
+        background-position: center;
     }
     &__photos {
         grid-column: 1/2;
-        &--right {
+        &--two {
             grid-column: 2/3;
             grid-row: 3/4;
         }
@@ -18,10 +24,11 @@
     &-video__content {
         width: 50vw;
         height: auto;
+        z-index: 1;
     }
     &__text {
         grid-column: 2/3;
-        padding:6rem 3rem;
+        padding:4rem 2rem;
         align-self: center;
         &--left {
             padding:6rem 3rem;
@@ -52,7 +59,135 @@
         font-family: 'DemonCubicBlockFont Black';
         font-size: 6rem;
         padding: 5rem 7rem;
-        background-image: url(../img/BrandonFinal.png);
+        background-image: url(../img/Dummy.png);
         background-position: center;
+    }
+    &__cards {
+        grid-column: 1/-1;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        justify-items: center;
+        margin: 1rem 2rem;
+        //background-color: blue;
+    }
+    &__card {
+        //width: 100%;
+        width: 300px;
+        height:auto;
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        //background-color: red;
+        &--img {
+            width: 100%;
+            transition: all .3s;
+            &:hover {
+                width: 130%;
+                transform: translateY(-10px);
+                z-index: 200;
+            }
+            &--one--1 {
+                grid-row: 1/5;
+                grid-column: 1/9;
+            }
+            &--one--2 {
+                grid-row: 3/6;
+                grid-column: 3/11;
+            }
+            &--two--1 {
+                grid-row: 1/5;
+                grid-column: 1/9;
+            }
+            &--two--2 {
+                grid-row: 3/6;
+                grid-column: 4/11 ;
+            }
+            &--three--1{
+                grid-row: 1/7;
+                grid-column: 2/8;
+            }
+            &--three--2{
+                grid-row: 3/7;
+                grid-column: 6/11;
+                &:hover {
+                    width: 110%;
+                    transform: translateX(-20px);
+                }
+            }
+        }
+        &--text {
+            font-size: 2.4rem;
+            grid-column: 1/-1;
+            grid-row: 6/7;
+        }
+    }
+    
+}
+@media only screen and (max-width: $bp-small){
+    .projects{
+        grid-column: 1/-1;
+
+        grid-template-columns: 100vw;
+        grid-template-rows: min-content repeat(4, auto);
+
+        &__photos {
+            grid-column: 1/-1;
+            &--one {
+                grid-row: 2/3;
+            }
+            &--three {
+                grid-row: 4/5;
+            }
+        }
+        &-video__content {
+            width: 100vw;
+            height: auto;
+        }
+        &__text {
+            grid-column: 1/-1;
+            z-index: 2;
+            background-color: transparent;
+            align-self: end;
+            padding: 3rem 1.5rem;
+            &--one {
+                grid-row: 2/3; 
+            }
+            &--three {
+                grid-row: 4/5;
+            }
+        }
+        &:hover &__text{
+            background-color: $color-red;
+        }
+        // &:hover &__text--one:hover,
+        // &:hover &__text--left:hover,
+        // &:hover &__text--three:hover{
+        //     display: none;
+        // }
+        // &:hover &__text--one:not(:hover),
+        // &:hover &__text--left:not(:hover),
+        // &:hover &__text--three:not(:hover){
+        //     display: none;
+        // }
+    } 
+}
+.btn-text:link,
+.btn-text:visited {
+    padding-top: .5rem;
+    display: block;
+    color: $color-white;
+    text-decoration: none;
+    transition: all .2s;
+}
+.btn-text:hover {
+    transform: translateY(-3px);
+    text-shadow: 2px 4px 8px $color-white;
+}
+@media only screen and (max-width: $bp-small) {
+    .btn-text:link,
+    .btn-text:visited {
+        font-size: 2rem;
+        //background-color: $color-dark-red;
     }
 }
